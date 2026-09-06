@@ -426,6 +426,18 @@ section { padding: 120px 40px; }
     border-radius: 4px;
     background-size: contain; background-position: center; background-repeat: no-repeat;
     margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+}
+.modal-gallery-backdrop {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center; background-repeat: no-repeat;
+    filter: blur(40px) brightness(0.7);
+    transform: scale(1.2);
+}
+.modal-gallery-fg {
+    position: absolute; inset: 0;
+    background-size: contain; background-position: center; background-repeat: no-repeat;
 }
 .modal-gallery-thumbs {
     display: flex; gap: 10px; overflow-x: auto;

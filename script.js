@@ -159,7 +159,16 @@ function setGalleryImage(modalId, imageUrl, thumbBtn) {
     const modal = document.getElementById(modalId);
     if (!modal) return;
     const mainImg = modal.querySelector('.modal-gallery-main');
-    if (mainImg) mainImg.style.backgroundImage = `url('${imageUrl}')`;
+    if (mainImg) {
+        const backdrop = mainImg.querySelector('.modal-gallery-backdrop');
+        const fg = mainImg.querySelector('.modal-gallery-fg');
+        if (backdrop && fg) {
+            backdrop.style.backgroundImage = `url('${imageUrl}')`;
+            fg.style.backgroundImage = `url('${imageUrl}')`;
+        } else {
+            mainImg.style.backgroundImage = `url('${imageUrl}')`;
+        }
+    }
     modal.querySelectorAll('.modal-gallery-thumbs button').forEach(b => b.classList.remove('active'));
     if (thumbBtn) thumbBtn.classList.add('active');
 }
