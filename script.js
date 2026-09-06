@@ -159,10 +159,7 @@ function setGalleryImage(modalId, imageUrl, thumbBtn) {
     const modal = document.getElementById(modalId);
     if (!modal) return;
     const mainImg = modal.querySelector('.modal-gallery-main');
-    if (mainImg) {
-        mainImg.style.backgroundImage = `url('${imageUrl}')`;
-        mainImg.style.backgroundPosition = (thumbBtn && thumbBtn.style.backgroundPosition) || 'center';
-    }
+    if (mainImg) mainImg.style.backgroundImage = `url('${imageUrl}')`;
     modal.querySelectorAll('.modal-gallery-thumbs button').forEach(b => b.classList.remove('active'));
     if (thumbBtn) thumbBtn.classList.add('active');
 }
