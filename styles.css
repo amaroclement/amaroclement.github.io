@@ -184,10 +184,12 @@ section { padding: 120px 40px; }
 .about-text strong { color: var(--ink); }
 
 .reorientation-box {
-    background: var(--ink); color: var(--bg); padding: 40px; margin-top: 40px; border-radius: 4px;
+    background: linear-gradient(135deg, var(--ink) 0%, #1c1433 65%, #2a1f4d 100%);
+    color: var(--bg); padding: 40px; margin-top: 40px; border-radius: 4px;
 }
 .reorientation-box h3 { font-family: 'Instrument Serif', serif; font-size: 28px; margin-bottom: 20px; color: var(--accent); }
 .reorientation-box p { font-size: 16px; line-height: 1.6; margin-bottom: 16px; opacity: 0.9; }
+.reorientation-box strong { color: var(--accent-3); }
 
 .skills-list { list-style: none; }
 .skills-list li {
