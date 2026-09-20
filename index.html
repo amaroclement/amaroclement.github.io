@@ -266,7 +266,7 @@
                             <p data-i18n="foxtrot.avatar.desc">Low poly, baking, optimisation mobile.</p>
                         </div>
                         <div class="subproject-item" data-modal="modal-uxui">
-                            <div class="subproject-thumb gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                            <div class="subproject-thumb" style="background-image: url('images/UXUI-Cover.jpg');"></div>
                             <h4 data-i18n="foxtrot.uxui.title">UX/UI Design</h4>
                             <p data-i18n="foxtrot.uxui.desc">Interface Figma, navigation et responsive.</p>
                         </div>
@@ -872,11 +872,13 @@
                 <p data-i18n="foxtrot.uxui.modal.intro">Conception de l'interface utilisateur sur Figma.</p>
             </div>
             <div class="modal-body">
-                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-main">
+                    <div class="modal-gallery-backdrop" style="background-image: url('images/UXUI-Cover.jpg');"></div>
+                    <div class="modal-gallery-fg" style="background-image: url('images/UXUI-Cover.jpg');"></div>
+                </div>
                 <div class="modal-gallery-thumbs">
-                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-uxui', '', this)"><span data-i18n="common.soon">À venir</span></button>
-                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-uxui', '', this)"><span data-i18n="common.soon">À venir</span></button>
-                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-uxui', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="active" style="background-image: url('images/UXUI-Cover.jpg');" onclick="setGalleryImage('modal-uxui', 'images/UXUI-Cover.jpg', this)"></button>
+                    <button type="button" style="background-image: url('images/UXUI-Workbench.jpg');" onclick="setGalleryImage('modal-uxui', 'images/UXUI-Workbench.jpg', this)"></button>
                 </div>
                 <div class="modal-sections">
                     <div class="modal-details modal-section-full">
