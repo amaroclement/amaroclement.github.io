@@ -184,7 +184,10 @@ section { padding: 120px 40px; }
 .about-text strong { color: var(--ink); }
 
 .reorientation-box {
-    background: linear-gradient(135deg, #ffffff 0%, #f3effc 60%, #eae2fb 100%);
+    background-color: #f8f6f1;
+    background-image:
+        radial-gradient(circle at 12% 15%, rgba(124,92,255,0.09) 0%, transparent 45%),
+        radial-gradient(circle at 92% 88%, rgba(47,209,192,0.10) 0%, transparent 45%);
     color: var(--ink); padding: 40px; margin-top: 40px; border-radius: 4px;
     border: 1px solid var(--line);
 }
