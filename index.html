@@ -237,7 +237,7 @@
                             <p data-i18n="character.desc">Création complète de personnage avec Character Creator, Marvelous Designer, Blender.</p>
                         </div>
                         <div class="subproject-item" data-modal="modal-dispenser">
-                            <div class="subproject-thumb gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                            <div class="subproject-thumb" style="background-image: url('images/Dispenser-Cover.jpg');"></div>
                             <h4 data-i18n="dispenser.title">Food Dispenser</h4>
                             <p data-i18n="dispenser.desc">Modélisation d'un objet produit, de la recherche de références au texturing final.</p>
                         </div>
@@ -456,11 +456,13 @@
                 <p data-i18n="dispenser.modal.intro">Création d'un distributeur pour le remake de Blue Stinger, avec un processus détaillé pour garantir un modèle réaliste.</p>
             </div>
             <div class="modal-body">
-                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-main">
+                    <div class="modal-gallery-backdrop" style="background-image: url('images/Dispenser-Cover.jpg');"></div>
+                    <div class="modal-gallery-fg" style="background-image: url('images/Dispenser-Cover.jpg');"></div>
+                </div>
                 <div class="modal-gallery-thumbs">
-                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-dispenser', '', this)"><span data-i18n="common.soon">À venir</span></button>
-                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-dispenser', '', this)"><span data-i18n="common.soon">À venir</span></button>
-                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-dispenser', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="active" style="background-image: url('images/Dispenser-Cover.jpg');" onclick="setGalleryImage('modal-dispenser', 'images/Dispenser-Cover.jpg', this)"></button>
+                    <button type="button" style="background-image: url('images/Dispenser-Variants.jpg');" onclick="setGalleryImage('modal-dispenser', 'images/Dispenser-Variants.jpg', this)"></button>
                 </div>
                 <div class="modal-sections">
                     <div class="modal-details modal-section-full">
