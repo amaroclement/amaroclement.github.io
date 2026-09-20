@@ -623,7 +623,7 @@ section { padding: 120px 40px; }
    ================================================================ */
 
 :root {
-    --accent-2: #2FD1C0; /* cyan turquoise */
+    --accent-2: #4A4A4A; /* gris foncé, remplace l'ancien turquoise pour ne garder qu'une seule couleur d'accent (violet) */
     --accent-3: #B4A6FF; /* lavande claire */
     --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
@@ -698,13 +698,14 @@ section { padding: 120px 40px; }
 .hero::before {
     width: 420px; height: 420px; top: -120px; left: -80px;
     background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+    opacity: 0.28;
     transform: translate(calc(var(--mx) * 1px), calc(var(--my) * 1px));
     animation: blobDrift 14s ease-in-out infinite alternate;
 }
 .hero::after {
     width: 500px; height: 500px; bottom: 30px; right: -100px;
     background: radial-gradient(circle, var(--accent-2) 0%, transparent 65%);
-    opacity: 0.22;
+    opacity: 0.18;
     transform: translate(calc(var(--mx) * -1px), calc(var(--my) * -1px));
     animation: blobDrift 18s ease-in-out infinite alternate-reverse;
 }
