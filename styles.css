@@ -644,6 +644,8 @@ section { padding: 120px 40px; }
     width: 72px; height: 72px;
     background: var(--accent);
     border-color: transparent;
+    mix-blend-mode: normal;
+    opacity: 0.85;
 }
 @media (hover: none), (pointer: coarse) {
     .cursor-dot, .cursor-ring { display: none; }
