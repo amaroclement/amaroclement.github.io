@@ -185,14 +185,11 @@ section { padding: 120px 40px; }
 
 .reorientation-box {
     background-color: #f8f6f1;
-    background-image:
-        radial-gradient(circle at 12% 15%, rgba(124,92,255,0.09) 0%, transparent 45%),
-        radial-gradient(circle at 92% 88%, rgba(47,209,192,0.10) 0%, transparent 45%);
     color: var(--ink); padding: 40px; margin-top: 40px; border-radius: 4px;
     border: 1px solid var(--line);
 }
-.reorientation-box h3 { font-family: 'Instrument Serif', serif; font-size: 28px; margin-bottom: 20px; color: var(--accent); }
-.reorientation-box p { font-size: 16px; line-height: 1.6; margin-bottom: 16px; color: var(--muted); }
+.reorientation-box h3 { font-family: 'Instrument Serif', serif; font-size: 28px; margin-bottom: 20px; color: var(--ink); }
+.reorientation-box p { font-size: 16px; line-height: 1.6; margin-bottom: 16px; color: #3a3a3a; }
 .reorientation-box strong { color: var(--ink); }
 
 .skills-list { list-style: none; }
