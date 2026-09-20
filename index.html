@@ -261,7 +261,7 @@
                             <p data-i18n="foxtrot.smartmat.desc">Bibliothèque de matériaux pour accélérer le texturing.</p>
                         </div>
                         <div class="subproject-item" data-modal="modal-avatar">
-                            <div class="subproject-thumb gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                            <div class="subproject-thumb" style="background-image: url('images/Avatar-Cover.jpg');"></div>
                             <h4 data-i18n="foxtrot.avatar.title">Avatar Personnalisable</h4>
                             <p data-i18n="foxtrot.avatar.desc">Low poly, baking, optimisation mobile.</p>
                         </div>
@@ -818,11 +818,15 @@
                 <p data-i18n="foxtrot.avatar.modal.intro">Modélisation lowpoly d'un avatar 3D avec parties personnalisables.</p>
             </div>
             <div class="modal-body">
-                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-main">
+                    <div class="modal-gallery-backdrop" style="background-image: url('images/Avatar-Cover.jpg');"></div>
+                    <div class="modal-gallery-fg" style="background-image: url('images/Avatar-Cover.jpg');"></div>
+                </div>
                 <div class="modal-gallery-thumbs">
-                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-avatar', '', this)"><span data-i18n="common.soon">À venir</span></button>
-                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-avatar', '', this)"><span data-i18n="common.soon">À venir</span></button>
-                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-avatar', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="active" style="background-image: url('images/Avatar-Cover.jpg');" onclick="setGalleryImage('modal-avatar', 'images/Avatar-Cover.jpg', this)"></button>
+                    <button type="button" style="background-image: url('images/Avatar-Wireframe.jpg');" onclick="setGalleryImage('modal-avatar', 'images/Avatar-Wireframe.jpg', this)"></button>
+                    <button type="button" style="background-image: url('images/Avatar-PouchesA.jpg');" onclick="setGalleryImage('modal-avatar', 'images/Avatar-PouchesA.jpg', this)"></button>
+                    <button type="button" style="background-image: url('images/Avatar-PouchesB.jpg');" onclick="setGalleryImage('modal-avatar', 'images/Avatar-PouchesB.jpg', this)"></button>
                 </div>
                 <div class="modal-sections">
                     <div class="modal-details modal-section-full">
