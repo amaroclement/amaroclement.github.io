@@ -742,7 +742,7 @@ section { padding: 120px 40px; }
 }
 .big-num {
     position: absolute;
-    top: -46px; left: -4px;
+    top: -46px; left: -22px;
     font-family: 'Instrument Serif', serif;
     font-style: italic;
     font-size: clamp(90px, 12vw, 180px);
