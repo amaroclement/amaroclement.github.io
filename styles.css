@@ -4,11 +4,15 @@
 :root {
     /* CHARTE GRAPHIQUE CRÈME & TURQUOISE */
     --bg: #EDEAE3;       /* Fond crème */
+    --bg-rgb: 237,234,227;
     --ink: #0E0E0E;      /* Texte noir profond */
+    --ink-rgb: 14,14,14;
     --accent: #2FD1C0;   /* Turquoise */
     --muted: #6B6B6B;    /* Gris moyen */
     --line: rgba(14,14,14,0.12); /* Lignes fines */
     --white: #ffffff;
+    --card-bg: #f8f6f1;
+    --card-text: #3a3a3a;
 }
 
 html { scroll-behavior: smooth; }
@@ -51,7 +55,7 @@ h2 em { font-style: italic; color: var(--muted); }
     padding: 20px 40px;
     display: flex; justify-content: space-between; align-items: center;
     z-index: 100;
-    background: rgba(237, 234, 227, 0.9);
+    background: rgba(var(--bg-rgb), 0.9);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--line);
 }
@@ -95,6 +99,28 @@ h2 em { font-style: italic; color: var(--muted); }
 .lang-switch button.active { color: var(--ink); opacity: 1; }
 .lang-switch button:hover { opacity: 1; color: var(--accent); }
 .lang-switch .sep { color: var(--line); opacity: 0.6; }
+
+/* Theme Switch (clair / sombre) */
+.theme-switch {
+    display: flex; align-items: center; gap: 2px;
+    margin-left: 16px;
+    padding: 3px;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    transition: border-color 0.3s;
+}
+.theme-switch button {
+    display: flex; align-items: center; justify-content: center;
+    width: 26px; height: 26px;
+    background: none; border: none; border-radius: 50%;
+    color: var(--muted); opacity: 0.6; cursor: pointer;
+    transition: all 0.3s;
+}
+.theme-switch button svg { width: 14px; height: 14px; }
+.theme-switch button:hover { opacity: 1; color: var(--accent); }
+.theme-switch button.active {
+    background: var(--ink); color: var(--bg); opacity: 1;
+}
 
 /* Hero Section */
 .hero {
@@ -184,12 +210,12 @@ section { padding: 120px 40px; }
 .about-text strong { color: var(--ink); }
 
 .reorientation-box {
-    background-color: #f8f6f1;
+    background-color: var(--card-bg);
     color: var(--ink); padding: 40px; margin-top: 40px; border-radius: 4px;
     border: 1px solid var(--line);
 }
 .reorientation-box h3 { font-family: 'Instrument Serif', serif; font-size: 28px; margin-bottom: 20px; color: var(--ink); }
-.reorientation-box p { font-size: 16px; line-height: 1.6; margin-bottom: 16px; color: #3a3a3a; }
+.reorientation-box p { font-size: 16px; line-height: 1.6; margin-bottom: 16px; color: var(--card-text); }
 .reorientation-box strong { color: var(--ink); }
 
 .skills-list { list-style: none; }
@@ -372,7 +398,7 @@ section { padding: 120px 40px; }
     padding: 30px 40px;
     text-align: center;
     font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(var(--bg-rgb), 0.1);
 }
 
 /* Modal System */
@@ -542,6 +568,7 @@ section { padding: 120px 40px; }
 
 @media (max-width: 900px) {
     .lang-switch { margin: 20px 0 0; justify-content: center; }
+    .theme-switch { margin: 12px 0 0; justify-content: center; align-self: center; }
 }
 
 /* Confidential Placeholder (Safran) */
@@ -626,6 +653,19 @@ section { padding: 120px 40px; }
     --accent-2: #2A2A2A; /* gris très foncé */
     --accent-3: #8FE3D8; /* turquoise clair */
     --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Mode sombre : inverse le crème/noir, réajuste les tons qui deviendraient invisibles */
+:root[data-theme="dark"] {
+    --bg: #16161A;
+    --bg-rgb: 22,22,26;
+    --ink: #F1EFE9;
+    --ink-rgb: 241,239,233;
+    --muted: #9C9A94;
+    --line: rgba(241,239,233,0.14);
+    --accent-2: #8A8A88; /* le gris foncé du mode clair deviendrait invisible sur fond sombre */
+    --card-bg: #232327;
+    --card-text: #C9C7C1;
 }
 
 /* Grain overlay — texture papier sur toute la page */
@@ -721,7 +761,7 @@ section { padding: 120px 40px; }
     content: attr(data-text);
     position: absolute; top: 0; left: 0; right: 0; z-index: -1;
     color: transparent;
-    -webkit-text-stroke: 1.5px rgba(14,14,14,0.1);
+    -webkit-text-stroke: 1.5px rgba(var(--ink-rgb), 0.1);
     transform: translate(12px, 10px) rotate(-1.2deg);
 }
 .hero-surname::before {
@@ -729,7 +769,7 @@ section { padding: 120px 40px; }
     position: absolute; top: 0; left: 0; right: 0; z-index: -1;
     color: transparent;
     font-style: italic;
-    -webkit-text-stroke: 1.5px rgba(14,14,14,0.1);
+    -webkit-text-stroke: 1.5px rgba(var(--ink-rgb), 0.1);
     transform: translate(12px, 10px) rotate(-1.2deg);
 }
 .hero-title .word {

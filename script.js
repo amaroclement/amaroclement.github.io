@@ -40,8 +40,34 @@ function initLanguageSwitch() {
     applyLanguage(initial);
 }
 
+// ============================================
+// THÈME — Mode clair / sombre
+// ============================================
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('portfolio-theme', theme);
+
+    document.querySelectorAll('.theme-switch button').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-theme-btn') === theme);
+    });
+}
+
+function initThemeSwitch() {
+    const buttons = document.querySelectorAll('.theme-switch button');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            applyTheme(btn.getAttribute('data-theme-btn'));
+        });
+    });
+
+    // Un script inline dans <head> a déjà posé data-theme avant le premier rendu (évite le flash) ; on synchronise juste les boutons dessus.
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    applyTheme(current);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initLanguageSwitch();
+    initThemeSwitch();
 
     // Mobile Menu Toggle
     const menuBtn = document.querySelector('.mobile-menu-btn');
