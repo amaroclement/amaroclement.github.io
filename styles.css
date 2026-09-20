@@ -742,7 +742,7 @@ section { padding: 120px 40px; }
 .section-header {
     position: relative;
     overflow: visible;
-    padding-top: 10px;
+    padding-top: 70px;
 }
 .big-num {
     position: absolute;
@@ -807,6 +807,7 @@ section { padding: 120px 40px; }
     .hero::before, .hero::after { opacity: 0.25; filter: blur(50px); }
     .hero-title::before, .hero-surname::before { display: none; }
     .big-num { display: none; }
+    .section-header { padding-top: 10px; }
     .project-card:hover { transform: none; }
     .reorientation-box { transform: none; box-shadow: none; }
 }
