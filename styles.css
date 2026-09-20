@@ -169,7 +169,7 @@ h2 em { font-style: italic; color: var(--muted); }
 section { padding: 120px 40px; }
 
 .section-header {
-    display: flex; justify-content: space-between; align-items: baseline;
+    display: flex; justify-content: space-between; align-items: center;
     margin-bottom: 60px;
     border-bottom: 1px solid var(--line); padding-bottom: 20px;
     flex-wrap: wrap; gap: 20px;
