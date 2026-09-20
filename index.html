@@ -251,7 +251,7 @@
                     </div>
                     <div class="subprojects-grid">
                         <div class="subproject-item" data-modal="modal-mk18">
-                            <div class="subproject-thumb gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                            <div class="subproject-thumb" style="background-image: url('images/MK18-Cover.jpg');"></div>
                             <h4 data-i18n="foxtrot.mk18.title">Asset Modulaire MK18</h4>
                             <p data-i18n="foxtrot.mk18.desc">Modélisation hard surface, structure modulaire et texturing.</p>
                         </div>
@@ -714,11 +714,16 @@
                 <p data-i18n="foxtrot.mk18.modal.intro">Asset hard surface entièrement modélisé sous Blender, avec structure modulaire pensée pour la personnalisation.</p>
             </div>
             <div class="modal-body">
-                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-main">
+                    <div class="modal-gallery-backdrop" style="background-image: url('images/MK18-Cover.jpg');"></div>
+                    <div class="modal-gallery-fg" style="background-image: url('images/MK18-Cover.jpg');"></div>
+                </div>
                 <div class="modal-gallery-thumbs">
-                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-mk18', '', this)"><span data-i18n="common.soon">À venir</span></button>
-                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-mk18', '', this)"><span data-i18n="common.soon">À venir</span></button>
-                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-mk18', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="active" style="background-image: url('images/MK18-Cover.jpg');" onclick="setGalleryImage('modal-mk18', 'images/MK18-Cover.jpg', this)"></button>
+                    <button type="button" style="background-image: url('images/MK18-Gold.jpg');" onclick="setGalleryImage('modal-mk18', 'images/MK18-Gold.jpg', this)"></button>
+                    <button type="button" style="background-image: url('images/MK18-Both.jpg');" onclick="setGalleryImage('modal-mk18', 'images/MK18-Both.jpg', this)"></button>
+                    <button type="button" style="background-image: url('images/MK18-Exploded.jpg');" onclick="setGalleryImage('modal-mk18', 'images/MK18-Exploded.jpg', this)"></button>
+                    <button type="button" style="background-image: url('images/MK18-Wireframe.jpg');" onclick="setGalleryImage('modal-mk18', 'images/MK18-Wireframe.jpg', this)"></button>
                 </div>
                 <div class="modal-sections">
                     <div class="modal-details modal-section-full">
