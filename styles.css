@@ -536,14 +536,18 @@ section { padding: 120px 40px; }
 }
 
 /* Confidential Placeholder (Safran) */
-.project-image.confidential {
-    background: repeating-linear-gradient(
-        135deg,
-        var(--ink),
-        var(--ink) 12px,
-        #1c1c1c 12px,
-        #1c1c1c 24px
-    );
+.project-image.confidential, .modal-gallery-main.confidential {
+    background:
+        repeating-linear-gradient(
+            135deg,
+            rgba(14,14,14,0.6),
+            rgba(14,14,14,0.6) 12px,
+            rgba(28,28,28,0.6) 12px,
+            rgba(28,28,28,0.6) 24px
+        ),
+        url('images/Safran-Cover.jpg');
+    background-size: cover, cover;
+    background-position: center, center;
     display: flex; align-items: center; justify-content: center;
 }
 .confidential-mark {
@@ -555,17 +559,7 @@ section { padding: 120px 40px; }
     font-size: 11px; text-transform: uppercase; letter-spacing: 2px;
     font-family: 'Space Grotesk', sans-serif;
 }
-.modal-image.confidential {
-    background: repeating-linear-gradient(
-        135deg,
-        var(--ink),
-        var(--ink) 12px,
-        #1c1c1c 12px,
-        #1c1c1c 24px
-    );
-    display: flex; align-items: center; justify-content: center;
-}
-.modal-image.confidential .confidential-mark svg { width: 44px; height: 44px; }
+.modal-gallery-main.confidential .confidential-mark svg { width: 44px; height: 44px; }
 
 /* Mega-project sub-items (Foxtrot) */
 .subprojects-grid {
