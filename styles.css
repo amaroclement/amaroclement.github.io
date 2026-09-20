@@ -738,7 +738,8 @@ section { padding: 120px 40px; }
 .section-header {
     position: relative;
     overflow: visible;
-    padding-top: 70px;
+    /* Suit la taille responsive du chiffre fantôme (clamp ci-dessous) pour garder un espace constant avec le label */
+    padding-top: calc(clamp(90px, 12vw, 180px) - 1px);
 }
 .big-num {
     position: absolute;
