@@ -761,8 +761,7 @@ section { padding: 120px 40px; }
     user-select: none;
     /* Compense le fort side-bearing gauche de l'italique pour aligner optiquement avec le label */
     margin-left: -22px;
-    /* Resserre l'espace sous le chiffre (line-height ajoute du blanc sous la lettre) */
-    margin-bottom: -30px;
+    margin-bottom: 15px;
 }
 .contact .big-num { color: var(--bg); opacity: 0.06; }
 
