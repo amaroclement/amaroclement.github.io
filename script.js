@@ -250,7 +250,7 @@ document.querySelectorAll('.project-card[data-modal], .subproject-item[data-moda
             };
             animateRing();
 
-            const hoverTargets = 'a, button, .project-card, .subproject-item, .btn';
+            const hoverTargets = 'a, button, .project-card:not(.bluestinger-mega):not(.foxtrot-mega), .subproject-item, .btn';
             document.addEventListener('mouseover', (e) => {
                 if (e.target.closest(hoverTargets)) cursorRing.classList.add('is-hover');
             });

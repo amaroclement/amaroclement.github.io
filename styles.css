@@ -794,6 +794,12 @@ section { padding: 120px 40px; }
 .project-card { transition: transform 0.4s ease; }
 .project-card:hover { transform: translateY(-8px); }
 
+/* Les en-têtes "mega-projet" ne sont pas cliquables : seuls leurs sous-projets le sont */
+.bluestinger-mega, .foxtrot-mega { cursor: default; }
+.bluestinger-mega:hover, .foxtrot-mega:hover { transform: none; }
+.bluestinger-mega:hover .project-image, .foxtrot-mega:hover .project-image { transform: none; }
+.bluestinger-mega:hover .overlay, .foxtrot-mega:hover .overlay { opacity: 0; }
+
 .tags span { transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease; }
 .tags span:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
