@@ -323,10 +323,19 @@ section { padding: 120px 40px; }
     padding: 160px 40px;
 }
 .contact .section-header {
+    position: relative;
+    overflow: visible;
     justify-content: center;
     border-bottom: none;
     flex-direction: column;
     align-items: center;
+}
+/* Contact garde le chiffre fantôme en filigrane d'arrière-plan plutôt qu'apparié au label */
+.contact .section-label-group { display: contents; }
+.contact .big-num {
+    position: absolute;
+    top: -46px; left: -22px;
+    margin: 0;
 }
 .contact .section-num { color: var(--muted); opacity: 0.7; }
 .contact .section-title { color: var(--bg); }
@@ -735,15 +744,13 @@ section { padding: 120px 40px; }
 }
 
 /* Grands chiffres fantômes dans les en-têtes de section */
-.section-header {
-    position: relative;
-    overflow: visible;
-    /* Suit la taille responsive du chiffre fantôme (clamp ci-dessous) pour garder un espace constant avec le label */
-    padding-top: calc(clamp(90px, 12vw, 180px) - 1px);
+/* Le chiffre fantôme + le label forment un seul bloc, centré comme une unité face au titre */
+.section-label-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .big-num {
-    position: absolute;
-    top: -46px; left: -22px;
     font-family: 'Instrument Serif', serif;
     font-style: italic;
     font-size: clamp(90px, 12vw, 180px);
@@ -751,8 +758,11 @@ section { padding: 120px 40px; }
     color: var(--ink);
     opacity: 0.05;
     pointer-events: none;
-    z-index: -1;
     user-select: none;
+    /* Compense le fort side-bearing gauche de l'italique pour aligner optiquement avec le label */
+    margin-left: -22px;
+    /* Resserre l'espace sous le chiffre (line-height ajoute du blanc sous la lettre) */
+    margin-bottom: -30px;
 }
 .contact .big-num { color: var(--bg); opacity: 0.06; }
 
@@ -810,7 +820,6 @@ section { padding: 120px 40px; }
     .hero::before, .hero::after { opacity: 0.25; filter: blur(50px); }
     .hero-title::before, .hero-surname::before { display: none; }
     .big-num { display: none; }
-    .section-header { padding-top: 10px; }
     .project-card:hover { transform: none; }
     .reorientation-box { transform: none; box-shadow: none; }
 }
