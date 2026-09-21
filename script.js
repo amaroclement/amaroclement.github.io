@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Animation simple du bouton hamburger
             const spans = menuBtn.querySelectorAll('span');
             if(navLinks.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[0].style.transform = 'translate(0, 8px) rotate(45deg)';
                 spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                spans[2].style.transform = 'translate(0, -8px) rotate(-45deg)';
             } else {
                 spans[0].style.transform = 'none';
                 spans[1].style.opacity = '1';

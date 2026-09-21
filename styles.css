@@ -66,6 +66,9 @@ h2 em { font-style: italic; color: var(--muted); }
 }
 .logo span { color: var(--accent); }
 
+/* Le conteneur de la navbar n'avait jamais été mis en flex : logo et liens s'empilaient sur deux lignes au lieu d'être sur une seule rangée */
+.nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+
 .nav-links { display: flex; gap: 32px; }
 .nav-links a {
     color: var(--ink);
@@ -74,6 +77,9 @@ h2 em { font-style: italic; color: var(--muted); }
     transition: opacity 0.3s, color 0.3s;
 }
 .nav-links a:hover { opacity: 1; color: var(--accent); }
+
+/* Reste toujours visible dans la barre (langue, thème, bouton menu), même quand le menu mobile est fermé */
+.nav-controls { display: flex; align-items: center; gap: 14px; }
 
 .mobile-menu-btn {
     display: none; background: none; border: none;
@@ -87,7 +93,6 @@ h2 em { font-style: italic; color: var(--muted); }
 .lang-switch {
     display: flex; align-items: center; gap: 6px;
     font-size: 13px; font-weight: 600; letter-spacing: 1px;
-    margin-left: 8px;
 }
 .lang-switch button {
     background: none; border: none; cursor: pointer;
@@ -103,7 +108,6 @@ h2 em { font-style: italic; color: var(--muted); }
 /* Theme Switch (clair / sombre) */
 .theme-switch {
     display: flex; align-items: center; gap: 2px;
-    margin-left: 16px;
     padding: 3px;
     border: 1px solid var(--line);
     border-radius: 100px;
@@ -550,7 +554,6 @@ section { padding: 120px 40px; }
 .lang-switch {
     display: flex; align-items: center; gap: 6px;
     font-size: 13px; letter-spacing: 1px; color: var(--ink);
-    margin-left: 12px;
 }
 .lang-switch button {
     background: none; border: none; cursor: pointer;
@@ -566,10 +569,6 @@ section { padding: 120px 40px; }
 .lang-switch button:hover { opacity: 1; color: var(--accent); }
 .lang-switch .sep { color: var(--muted); opacity: 0.4; font-size: 12px; }
 
-@media (max-width: 900px) {
-    .lang-switch { margin: 20px 0 0; justify-content: center; }
-    .theme-switch { margin: 12px 0 0; justify-content: center; align-self: center; }
-}
 
 /* Confidential Placeholder (Safran) */
 .project-image.confidential, .modal-gallery-main.confidential {
